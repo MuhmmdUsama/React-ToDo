@@ -1,4 +1,7 @@
-const Form = ({ setInput, todos, setTodos, input }) => {
+const Form = ({
+  // eslint-disable-next-line
+  setInput, todos, setTodos, input,
+}) => {
   const inputHandler = (e) => {
     setInput(e.target.value);
   };
@@ -21,16 +24,8 @@ const Form = ({ setInput, todos, setTodos, input }) => {
         className="todo-input"
       />
       <button onClick={submitTodo} className="todo-button" type="submit">
-        <i className="fas fa-plus-square"></i>
+        <i className="fas fa-plus-square" />
       </button>
-
-      {/* <div className="select">
-        <select name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
-      </div> */}
     </form>
   );
 };

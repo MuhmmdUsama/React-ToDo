@@ -1,4 +1,10 @@
-const Task = ({ text, todo, todos, setTodos }) => {
+/* eslint-disable */
+const Task = ({
+  text,
+  todo,
+  todos,
+  setTodos,
+}) => {
   const deleteHandler = () => {
     setTodos(todos.filter((e) => e.id !== todo.id));
   };
@@ -15,12 +21,14 @@ const Task = ({ text, todo, todos, setTodos }) => {
   };
   return (
     <div className="todo">
-      <button onClick={completeHandler} className="complete-btn">
-        <i className="fas fa-check"></i>
+      <button type="button" onClick={completeHandler} className="complete-btn">
+        <i className="fas fa-check" />
       </button>
-      <li className={`todo-item ${todo.completed ? 'completed':''}`}>{text}</li>
-      <button onClick={deleteHandler} className="trash-btn">
-        <i className="fas fa-trash"></i>
+      <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
+        {text}
+      </li>
+      <button type="button" onClick={deleteHandler} className="trash-btn">
+        <i className="fas fa-trash" />
       </button>
     </div>
   );
