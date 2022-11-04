@@ -1,5 +1,7 @@
 const Task = ({text}) => {
-  console.log('props', text);
+    const deleteHandler = ()=>{
+
+    }
   return (
     <div className="todo">
       <button className="complete-btn">
