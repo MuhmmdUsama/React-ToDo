@@ -1,14 +1,15 @@
-const Form = ({setInput}) => {
-    const inputHandler = (e)=>{
-        console.log(e.target.value);
-        setInput(e.target.value)
-    }
+const Form = ({ setInput }) => {
+  const inputHandler = (e) => {
+    console.log(e.target.value);
+    setInput(e.target.value);
+  };
   return (
     <form>
       <input onChange={inputHandler} type="text" className="todo-input" />
       <button className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
+
       <div className="select">
         <select name="todos" className="filter-todo">
           <option value="all">All</option>
