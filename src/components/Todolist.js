@@ -1,12 +1,18 @@
 import Task from './Task';
 
-const Todolist = ({ todos }) => {
+const Todolist = ({ todos, setTodos }) => {
   //   console.log('todos', todos);
   return (
     <div className="todo-container">
       <ul className="todo-list">
         {todos.map((todo) => (
-          <Task key={todo.id} text={todo.text} />
+          <Task
+            setTodos={setTodos}
+            todos={todos}
+            key={todo.id}
+            todo={todo}
+            text={todo.text}
+          />
         ))}
       </ul>
     </div>
