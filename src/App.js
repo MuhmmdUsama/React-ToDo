@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import './App.css';
-
 import Form from './components/Form.js';
 import Todolist from './components/Todolist';
 
 function App() {
   const [input, setInput] = useState('');
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
       <header>
-        <h1>ToDo {input}</h1>
+        <h1>ToDo</h1>
       </header>
-      <Form setInput={setInput} />
+      <Form input={input} todos={todos} setTodos={setTodos} setInput={setInput} />
       <Todolist />
     </div>
   );
